@@ -7,43 +7,43 @@
     <div class="col-lg-6 col-md-8 col-sm-12">
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label>Nome</label>
-          <input type="text" id="nome" class="form-control" formControlName="nome" required/>
+          <label>jogo</label>
+          <input type="text" id="jogo" class="form-control" formControlName="jogo" required/>
           <!-- errors-->
-          <p *ngIf="nome?.touched && nome?.invalid" class="error">
-            <sup>*</sup>Nome obrigatório
+          <p *ngIf="jogo?.touched && jogo?.invalid" class="error">
+            <sup>*</sup>jogo obrigatório
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label>Idade</label>
+          <label>Ano lancamento</label>
           <input
             type="number"
-            formControlName="idade"
+            formControlName="lancamento"
             class="form-control"
             required
           />
           <!-- errors-->
-          <p *ngIf="idade?.touched && idade?.invalid" class="error">
-            <sup>*</sup>Informe a idade
+          <p *ngIf="lancamento?.touched && lancamento?.invalid" class="error">
+            <sup>*</sup>Informe a lancamento
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label>Telefone:</label>
+          <label>desenvolvedora:</label>
           <input
             type="text"
-            formControlName="telefone"
+            formControlName="desenvolvedora"
             class="form-control"
             required
           />
           <!-- errors-->
-          <p *ngIf="telefone?.touched && telefone?.invalid" class="error">
-            <sup>*</sup>Informe telefone
+          <p *ngIf="desenvolvedora?.touched && desenvolvedora?.invalid" class="error">
+            <sup>*</sup>Informe desenvolvedora
           </p>
-          <p *ngIf="telefone?.errors?.['pattern']" class="error">
+          <p *ngIf="desenvolvedora?.errors?.['pattern']" class="error">
             <sup>*</sup>Use apenas números
           </p>
         </div>

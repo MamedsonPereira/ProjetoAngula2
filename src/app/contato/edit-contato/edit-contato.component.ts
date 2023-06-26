@@ -26,9 +26,9 @@ export class EditContatoComponent implements OnInit {
 
   createForm(){
     return this.fb.group({
-      nome: new FormControl('', Validators.required),
-      idade: new FormControl('', Validators.required),
-      telefone: new FormControl('', [Validators.required,  Validators.pattern('^[0-9]+$')])
+      jogo: new FormControl('', Validators.required),
+      lancamento: new FormControl('', Validators.required),
+      desenvolvedora: new FormControl('', [Validators.required,  Validators.pattern('^[0-9]+$')])
     });
   }
 
@@ -48,7 +48,7 @@ export class EditContatoComponent implements OnInit {
   submitForm(){
     this.contatoService.updateContato(this.contatoForm.value);
     this.toastr.success(
-      this.contatoForm.controls['nome'].value + " atualizado."
+      this.contatoForm.controls['jogo'].value + " atualizado."
     );
     this.router.navigate(['list-contato']);
   }
@@ -57,15 +57,15 @@ export class EditContatoComponent implements OnInit {
     this.location.back();
   }
 
-  get nome(){
-    return this.contatoForm.get('nome');
+  get jogo(){
+    return this.contatoForm.get('jogo');
   }
 
-  get idade(){
-    return this.contatoForm.get('idade');
+  get lancamento(){
+    return this.contatoForm.get('lancamento');
   }
 
-  get telefone(){
-    return this.contatoForm.get('telefone');
+  get desenvolvedora(){
+    return this.contatoForm.get('desenvolvedora');
   }
 }

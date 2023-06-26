@@ -4,44 +4,44 @@
 <form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
   <div class="row">
     <div class="col-lg-6 col-md-8 col-sm-12">
-      <!-- NOME -->
+      <!-- jogo -->
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label [ngClass]="{'text-danger': nome?.touched && nome?.invalid}"
-          for="nome" ckass="form-label">Nome</label>
+          <label [ngClass]="{'text-danger': jogo?.touched && jogo?.invalid}"
+          for="jogo" ckass="form-label">jogo</label>
           <input
-          [ngClass]="{'is-invalid': nome?.touched && nome?.invalid, 'is-valid': nome?.touched && nome?.valid}"
-          type="text" id="nome" class="form-control" formControlName="nome" required>
-          <div class="invalid-feedback"><sup>*</sup>Nome obrigatório</div>
+          [ngClass]="{'is-invalid': jogo?.touched && jogo?.invalid, 'is-valid': jogo?.touched && jogo?.valid}"
+          type="text" id="jogo" class="form-control" formControlName="jogo" required>
+          <div class="invalid-feedback"><sup>*</sup>jogo obrigatório</div>
         </div>
       </div>
-      <!-- IDADE -->
+      <!-- lancamento -->
       <div class="row">
         <div class="col-md-12 mb-3">
           <label
-          [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
-          for="idade" class="form-label">Idade</label>
+          [ngClass]="{'text-danger': lancamento?.touched && lancamento?.invalid}"
+          for="lancamento" class="form-label">Ano lancamento</label>
         <input
-          [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
+          [ngClass]="{'is-invalid': lancamento?.touched && lancamento?.invalid, 'is-valid': lancamento?.touched && lancamento?.valid}"
           type="number"
-          formControlName="idade"
+          formControlName="lancamento"
           class="form-control"
           required
         />
         <!-- Validation FeedBack -->
-        <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
+        <div class="invalid-feedback"><sup>*</sup>lancamento obrigatório</div>
         </div>
       </div>
-      <!-- TELEFONE -->
+      <!-- desenvolvedora -->
       <div class="row">
         <div class="col-md-12 mb-3">
           <label
-          [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
-          for="telefone" class="form-label">Telefone:</label>
+          [ngClass]="{'text-danger': desenvolvedora?.touched && desenvolvedora?.invalid}"
+          for="desenvolvedora" class="form-label">desenvolvedora:</label>
         <input
-          [ngClass]="{'is-invalid': telefone?.touched && telefone?.invalid, 'is-valid': telefone?.touched && telefone?.valid}"
+          [ngClass]="{'is-invalid': desenvolvedora?.touched && desenvolvedora?.invalid, 'is-valid': desenvolvedora?.touched && desenvolvedora?.valid}"
           type="text"
-          formControlName="telefone"
+          formControlName="desenvolvedoras"
           class="form-control"
           required
         />

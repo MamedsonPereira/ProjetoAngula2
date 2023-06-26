@@ -21,9 +21,9 @@ export class ContatoService {
   insertContato(contato: Contato){
     this.listaContatosRef.push(
       {
-        nome: contato.nome,
-        idade: contato.idade,
-        telefone: contato.telefone
+        jogo: contato.jogo,
+        lancamento: contato.lancamento,
+        desenvolvedora: contato.desenvolvedora
       }
     );
   }
@@ -41,9 +41,9 @@ export class ContatoService {
   //CR Update D
   updateContato(contato: Contato){
     this.contatoRef.update({
-      nome: contato.nome,
-      idade: contato.idade,
-      telefone: contato.telefone
+      jogo: contato.jogo,
+      lancamento: contato.lancamento,
+      desenvolvedora: contato.desenvolvedora
     });
   }
 

@@ -21,9 +21,9 @@ export class AddContatoComponent implements OnInit {
 
   createForm(){
     return this.fb.group({
-      nome: new FormControl('', Validators.required),
-      idade: new FormControl('', Validators.required),
-      telefone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')])
+      jogo: new FormControl('', Validators.required),
+      lancamento: new FormControl('', Validators.required),
+      desenvolvedora: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')])
     });
   }
 
@@ -38,19 +38,19 @@ export class AddContatoComponent implements OnInit {
   submitForm(){
     this.contatoService.insertContato(this.contatoForm.value);
     this.toastr.success(
-      this.contatoForm.controls['nome'].value + " adicionado."
+      this.contatoForm.controls['jogo'].value + " adicionado."
     );
   }
 
-  get nome(){
-    return this.contatoForm.get('nome');
+  get jogo(){
+    return this.contatoForm.get('jogo');
   }
 
-  get idade(){
-    return this.contatoForm.get('idade');
+  get lancamento(){
+    return this.contatoForm.get('lancamento');
   }
 
-  get telefone(){
-    return this.contatoForm.get('telefone');
+  get desenvolvedora(){
+    return this.contatoForm.get('desenvolvedora');
   }
 }

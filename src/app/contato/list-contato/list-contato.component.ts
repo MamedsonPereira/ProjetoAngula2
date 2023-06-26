@@ -43,7 +43,7 @@ export class ListContatoComponent implements OnInit {
     if (window.confirm("Tem certeza que deseja remover o contato?")){
       if (contato.$key != null) {
         this.contatoService.deleteContato(contato.$key);
-        this.toastr.success(contato.nome + " removido com sucesso.");
+        this.toastr.success(contato.jogo + " removido com sucesso.");
       }
     }
   }
